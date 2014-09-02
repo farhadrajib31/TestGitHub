@@ -1,0 +1,42 @@
+Install Office 2007 Home and Student Edition with any trial serial number.
+
+Here are a few you can use:
+
+DDY79-433JV-2RXGX-MQFQP-PFDH8
+
+B4MKP-KP9YP-7TBQ4-7T4XF-MTGWY
+
+P7FXC-C4XJJ-6224W-6WMX3-J8VVB
+
+After installing Office 2007; do the following steps:-
+
+Start Menu->Run->type 'regedit' and press enter.
+
+The Registry Editor window will open up.
+
+In that window in the left panel follow these steps:-
+
+HKEY_LOCAL_MACHINE->SOFTWARE->Microsoft->OFFICE->12.0->REGISTRATION-> {91120000-002F-0000-0000-0000000FF1CE}
+
+On the right panel u can see the registry entries. From the list find and delete the entries named 'Product ID' or 'Vasue ID' and 'Digital Product ID' or 'Digital Value ID'.
+
+Then close the Registry Editor Window.
+
+Now go to C:\Program Files\Common Files\Microsoft Shared\OFFICE12\Office Setup Controller\Proof.en
+
+In that location you will see a xml file named 'Proof'. Right click on that file and go to Open With and select notepad.
+
+In that file, make it sure that the last lines say the following:
+
+<Feature Id="SetupXmlFiles" Cost="1359">
+		<OptionRef Id="AlwaysInstalled"/>
+	</Feature>
+</Package>
+
+If required; change the lines by typing these correct lines and there should not be any other lines under these lines. If there are any other lines; then delete those lines.
+
+Now save & close the file.
+
+Now you have successfully converted your Office 2007 Trial to a full version.
+
+Enjoy using office 2007...
